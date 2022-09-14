@@ -33,4 +33,15 @@ public class FabridashMod implements ModInitializer {
             LootTableModifier.modifyLootTables();
         }
     }
+
+    /**
+     * Should items (iron dasher, diamond dasher, ecc)
+     * be added by this mod instance?
+     *
+     * @param b Set this to falso to disable items, true (default) to enable them
+     * */
+    public static void toggleItems(boolean b){
+        Config.ITEMS_ENABLED = b;
+        Config.reloadConfig();
+    }
 }

@@ -6,17 +6,14 @@
     },
     "B": {
       "item": "minecraft:obsidian"
-    },
-    "#": {
-      "item": "minecraft:air"
     }
   },
   "pattern": [
-    "#B#",
+    " B ",
     "BOB",
-    "#B#"
+    " B "
   ],
   "result": {
-    "item": "fabridash:iron_dasher"
+    "item": "fabridash:obsidian_dasher"
   }
 }

@@ -9,9 +9,6 @@
     },
     "R": {
       "item": "minecraft:redstone_block"
-    },
-    "#": {
-      "item": "minecraft:air"
     }
   },
   "pattern": [
@@ -20,6 +17,6 @@
     "RBR"
   ],
   "result": {
-    "item": "fabridash:iron_dasher"
+    "item": "fabridash:diamond_dasher"
   }
 }
