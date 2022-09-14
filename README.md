@@ -1,4 +1,5 @@
 # Fabridash Mod
+With this mod you will be able to dash across your world 
 ## Setup
 ### Users
 Drag and drop the .jar file you have downloaded from curseforge/modrinth and drop it into your mods folder!
