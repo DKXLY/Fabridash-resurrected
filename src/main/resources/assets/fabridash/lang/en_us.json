@@ -1,0 +1,7 @@
+{
+  "gamerule.dashMultiplier": "[Fabridash] The higher the number the longer the dash (of all items)",
+  "item.fabridash.iron_dasher": "Iron Dasher",
+  "item.fabridash.diamond_dasher": "Diamond Dasher",
+  "item.fabridash.obsidian_dasher": "Obsidian Dasher",
+  "item.fabridash.dash_globe": "Dash Globe"
+}

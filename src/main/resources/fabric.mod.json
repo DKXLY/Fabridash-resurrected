@@ -1,36 +1,40 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "fabridash",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Fabridash",
+  "description": "This mod adds the dash ability! In the form of an item or library for other mods!",
   "authors": [
-    "Me!"
+    "Emafire003"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/Emafire003/Fabridash",
+    "sources": "https://github.com/Emafire003/Fabridash",
+    "issues": "https://github.com/Emafire003/Fabridash/issues"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/fabridash/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "me.emafire003.dev.fabridash.FabridashMod"
+    ],
+    "client": [
+      "me.emafire003.dev.fabridash.FabridashClient"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "fabridash.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.14.9",
     "fabric-api": "*",
-    "minecraft": "~1.19",
-    "java": ">=17"
+    "minecraft": ">=1.17-",
+    "java": ">=16"
   },
   "suggests": {
     "another-mod": "*"

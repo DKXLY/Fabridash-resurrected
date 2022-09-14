@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "O": {
+      "item": "fabridash:dash_globe"
+    },
+    "B": {
+      "item": "minecraft:diamond_block"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    },
+    "#": {
+      "item": "minecraft:air"
+    }
+  },
+  "pattern": [
+    "RBR",
+    "BOB",
+    "RBR"
+  ],
+  "result": {
+    "item": "fabridash:iron_dasher"
+  }
+}

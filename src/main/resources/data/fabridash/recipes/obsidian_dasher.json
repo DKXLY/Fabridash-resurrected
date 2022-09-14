@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "O": {
+      "item": "fabridash:diamond_dasher"
+    },
+    "B": {
+      "item": "minecraft:obsidian"
+    },
+    "#": {
+      "item": "minecraft:air"
+    }
+  },
+  "pattern": [
+    "#B#",
+    "BOB",
+    "#B#"
+  ],
+  "result": {
+    "item": "fabridash:iron_dasher"
+  }
+}
