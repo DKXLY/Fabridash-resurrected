@@ -3,6 +3,7 @@ package me.emafire003.dev.fabridash.api;
 import me.emafire003.dev.fabridash.sounds.FabridashSounds;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
@@ -29,6 +30,9 @@ public class Fabridash {
         }
         if(entity instanceof ServerPlayerEntity){
             sendVelocityPacket((ServerPlayerEntity) entity, entity.getVelocity());
+        }
+        for(int i = 0; i<50; i++){
+            entity.getWorld().addParticle(ParticleTypes.CLOUD, entity.getX()+entity.getRandom().nextFloat(), entity.getY()+entity.getRandom().nextFloat(), entity.getZ()+entity.getRandom().nextFloat(), 0, 0.1, 0);
         }
         entity.playSound(FabridashSounds.DASH, 1, 1);
     }

@@ -1,8 +1,12 @@
 # Fabridash Mod
 ## Setup
-
-Drang and drop the .jar file you have downloaded from curseforge/modrinth and drop it into your mods folder
+### Users
+Drag and drop the .jar file you have downloaded from curseforge/modrinth and drop it into your mods folder!
+### Developers
+If you want to use the api module of the mod, add it in your build.gradle, using modrnith's repo like this:
+//TODO
+(or jitpack if you want)
 
 ## License
 
-This mod is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+This mod is available under the MIT license.

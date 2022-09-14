@@ -14,8 +14,8 @@
     "issues": "https://github.com/Emafire003/Fabridash/issues"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/fabridash/icon.png",
+  "license": "MIT",
+  "icon": "assets/fabridash/fabridash_icon.jpg",
 
   "environment": "*",
   "entrypoints": {
