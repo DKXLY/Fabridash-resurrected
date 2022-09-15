@@ -39,7 +39,6 @@ This item will let you do a *backwards* dash, with a multiplier of 2 and a coold
 
 Whenever one of this gets activated you will hear a dash sound effect, and see some particles! 
 
-
 ## Sponsor
 [![bisecthosting](https://www.bisecthosting.com/partners/custom-banners/e9c85d2a-cafa-4e2f-98bf-4f62bd9e951c.png)](https://www.bisecthosting.com/LightDev)
 
@@ -47,6 +46,14 @@ If you like the mod you can always buy me a kofi
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S88307C)
 
+## Config & gamerule
+To have a higher boost for the dash you can use the `dashMultiplier` gamerule. This value will be *multiplied* by the default value of the items.
+
+There is also a config file, where you can disable the items entirely and only use this as an API
+
+## For developers
+Once you've got the mod implemented into you project (See setup), you will simply need to call `Fabridash.dash(Entity entity, float power, boolean reversed)`
+The `entity` is the one that will perform the dash, the `power` is how far it will go and the `reversed` on **true** will make the entity go **backwards** instead of forward. And that's it.
 
 ## Coming soon-ish 
 I will probably expand the ways in which you will be able to dash, going from a key press to maybe a "passive" ability, or a command. All of which will be togglable. This mod was born to create an API for future projects in need of a dash ability. Like my other (kind of "main") project [LightWithin](https://modrinth.com/mods/LightWithin)! (actually it was born because of that project like a few of my other libs)
