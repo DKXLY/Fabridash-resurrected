@@ -33,7 +33,9 @@ This item will let you do a *backwards* dash, with a multiplier of 2 and a coold
 
 ## Sponsor
 [![bisecthosting](https://www.bisecthosting.com/partners/custom-banners/e9c85d2a-cafa-4e2f-98bf-4f62bd9e951c.png)](https://www.bisecthosting.com/LightDev)
+
 If you like the mod you can always buy me a kofi
+
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S88307C)
 
 
