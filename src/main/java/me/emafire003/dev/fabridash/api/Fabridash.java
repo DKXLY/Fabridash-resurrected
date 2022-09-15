@@ -2,17 +2,28 @@ package me.emafire003.dev.fabridash.api;
 
 import me.emafire003.dev.fabridash.sounds.FabridashSounds;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 
+import java.util.Random;
+
 import static me.emafire003.dev.fabridash.FabridashMod.LOGGER;
 
 public class Fabridash {
     
-    public static void dash(LivingEntity entity, float power, boolean reversed){
+    private static Random random = new Random();
+
+    /**
+     * With this you can launch (or "dash") an entity forwards or backwards
+     *
+     * @param entity The entity that will perform the dash/will be launched
+     * @param power The power of the dash aka how far it will go
+     * @param reversed Weather to reverse the direction of the dash or no*/
+    public static void dash(Entity entity, float power, boolean reversed){
         float f = entity.getYaw();
         float g = entity.getPitch();
         float h = -MathHelper.sin(f * 0.017453292F) * MathHelper.cos(g * 0.017453292F);
@@ -32,11 +43,14 @@ public class Fabridash {
             sendVelocityPacket((ServerPlayerEntity) entity, entity.getVelocity());
         }
         for(int i = 0; i<50; i++){
-            entity.getWorld().addParticle(ParticleTypes.CLOUD, entity.getX()+entity.getRandom().nextFloat(), entity.getY()+entity.getRandom().nextFloat(), entity.getZ()+entity.getRandom().nextFloat(), 0, 0.1, 0);
+            entity.getWorld().addParticle(ParticleTypes.CLOUD, entity.getX()+random.nextFloat(), entity.getY()+random.nextFloat(), entity.getZ()+random.nextFloat(), 0, 0.1, 0);
         }
         entity.playSound(FabridashSounds.DASH, 1, 1);
     }
 
+    /**This method will send a packet to the client, sending the velocity
+     * calculated by the server to not cause desyncs. You normally don't need
+     * to use it.*/
     public static void sendVelocityPacket(ServerPlayerEntity player, Vec3d vel){
         LOGGER.info("Sending the packet, with this vel: "+ vel);
         try{

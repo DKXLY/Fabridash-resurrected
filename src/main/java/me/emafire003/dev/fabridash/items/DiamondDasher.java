@@ -18,7 +18,9 @@ public class DiamondDasher extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         user.getItemCooldownManager().set(this, 120);
-        Fabridash.dash(user, 2*world.getGameRules().getInt(FabridashMod.DASH_MULTIPLIER), false);
+        if(!world.isClient){
+            Fabridash.dash(user, 2*world.getGameRules().getInt(FabridashMod.DASH_MULTIPLIER), false);
+        }
         return TypedActionResult.pass(user.getStackInHand(hand));
     }
 
