@@ -69,7 +69,7 @@ repositories {
 }
 
 dependencies {
-    modImplementation "maven.modrinth:coloredglowlib:<version>"
+    modImplementation "maven.modrinth:fabridash:<version>"
 }
 ```
 You could even extract the API module and use it as is, but remember to register the client reciver!
