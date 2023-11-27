@@ -1,5 +1,5 @@
 # Fabridash Mod
-With this mod you will be able to dash across your world, using 3 different items! And also, if you are a developer you may use this mod as an API to integrate dashing (get it? eheh) into your project! This fork is created as a way to continue using this mod in future Minecraft versions, I am NOT the original creator, the dashing code was made by [![EmaFire003]](https://github.com/emafire003/)
+With this mod you will be able to dash across your world, using 3 different items! And also, if you are a developer you may use this mod as an API to integrate dashing (get it? eheh) into your project! This fork is created as a way to continue using this mod in future Minecraft versions, I am NOT the original creator, the dashing code was made by [EmaFire003](https://github.com/emafire003/)
 
 ## The Dash items
 Unlike other mods, to perform a dash with this mod you will need to find some treasure first! A **Dash Globe** to be precise, and it can be found inside treasure chests from ancienty cities, mineshafts and such! (with a chance that goes from a minimum of 12% in mineshafts to 30% in the end city).
