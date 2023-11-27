@@ -13,7 +13,7 @@ The most basic (yet powerful) item that will let you dash to your next journey, 
 
 ![iron_dasher_crafting](https://user-images.githubusercontent.com/29462910/190399028-f819dfd4-29bd-4d30-a572-cc95c38bff68.JPG)
 
-(It will require a Dash Globe, 4 Iron Blocks, 4 Redstone Blocks)
+(It will require a `Dash Globe`, `4 Iron Blocks`, 4 Redstone Blocks)
 
 It will provide a decent boost (multiplier of 1) and it has a cooldown of 80 ticks.
 
