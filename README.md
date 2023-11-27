@@ -1,13 +1,14 @@
 # Fabridash Mod
-With this mod you will be able to dash across your world, using 3 different items! And also, if you are a developer you may use this mod as an API to integrate dashing (get it? eheh) into your project! This fork is created as a way to continue using this mod in future Minecraft versions, I am NOT the original creator, the dashing code and the textures were made by [EmaFire003](https://github.com/emafire003/).
+With this mod you will be able to dash across your world, using 3 different items! And also, if you are a developer you may use this mod as an `API` to integrate dashing (get it? eheh) into your project! This fork is created as a way to continue using this mod in future Minecraft versions, I am NOT the original creator, the dashing code and the textures were made by [EmaFire003](https://github.com/emafire003/).
 
 ## The Dash items
-Unlike other mods, to perform a dash with this mod you will need to find some treasure first! A **Dash Globe** to be precise, and it can be found inside treasure chests from ancienty cities, mineshafts and such! (with a chance that goes from a minimum of 12% in mineshafts to 30% in the end city).
+Unlike other mods, to perform a dash with this mod you will need to find some treasure first! A `**Dash Globe**` to be precise, and it can be found inside treasure chests from ancient cities, mineshafts and such! (with a chance that goes from a minimum of 12% in mineshafts to 30% in the end city).
 
 Once you obtain the core item, you may craft the actual "dashers" (yeah, I kinda like making puns):
 
-You can dash by right clicking the dasher item. 
-### Iron Dasher
+You can dash by right clicking the dasher item.
+
+### `Iron Dasher`
 The most basic (yet powerful) item that will let you dash to your next journey, you can craft it like this:
 
 ![iron_dasher_crafting](https://user-images.githubusercontent.com/29462910/190399028-f819dfd4-29bd-4d30-a572-cc95c38bff68.JPG)
@@ -18,8 +19,8 @@ It will provide a decent boost (multiplier of 1) and it has a cooldown of 80 tic
 
 ![irondashergif](https://user-images.githubusercontent.com/29462910/190407499-c01c96f9-4dd9-47a3-a813-25e6f7707551.gif)
 
-### Diamond Dasher
-The advanced version of the iron dasher, which you can craft like this:
+### `Diamond Dasher`
+The advanced version of the `**Iron Dasher**`, which you can craft like this:
 
 ![diamond_dasher_crafting](https://user-images.githubusercontent.com/29462910/190399957-6fa7297d-87ff-4fc2-8aa4-d1c087a1049d.JPG)
 
@@ -29,25 +30,18 @@ It will provide a bigger boost (multiplier 2) with a cooldown of 120 ticks.
 
 ![diamondashergif)](https://user-images.githubusercontent.com/29462910/190407984-add714c6-5944-49f2-84a5-509291d59a02.gif)
 
-### Obsidian Dasher
-The weird and "reversed" version of the diamond dasher, craftable like so:
+### `Obsidian Dasher`
+The weird and "reversed" version of the `**Diamond Dasher**`, craftable like so:
 
 ![obsidian_dasher_crafting](https://user-images.githubusercontent.com/29462910/190400323-f01b4d84-f7dd-476d-849c-cf3ad0a1beed.JPG)
 
-(It will require a Diamond Dasher, 4 Obisidian)
+(It will require a `**Diamond Dasher**`, 4 Obisidian)
 
 This item will let you do a *backwards* dash, with a multiplier of 2 and a cooldown of 120 ticks (just like the diamond one, but reversed in direction)
 
 ![obsidiandashergif](https://user-images.githubusercontent.com/29462910/190408729-e8e78885-b2e9-4a1e-99e4-85fc27d96788.gif)
 
 Whenever one of this gets activated you will hear a dash sound effect, and see some particles! 
-
-## Sponsor
-[![bisecthosting](https://www.bisecthosting.com/partners/custom-banners/e9c85d2a-cafa-4e2f-98bf-4f62bd9e951c.png)](https://www.bisecthosting.com/LightDev)
-
-If you like the mod you can always buy me a kofi
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S88307C)
 
 ## Config & gamerule
 To have a higher boost for the dash you can use the `dashMultiplier` gamerule. This value will be *multiplied* by the default value of the items.
