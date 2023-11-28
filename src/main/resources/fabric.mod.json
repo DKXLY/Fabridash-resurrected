@@ -1,39 +1,40 @@
 {
   "schemaVersion": 1,
-  "id": "fabridash",
+  "id": "fabridash_resurrected",
   "version": "${version}",
 
-  "name": "Fabridash",
-  "description": "This mod adds the dash ability! In the form of an item or library for other mods!",
+  "name": "Fabridash Resurrected",
+  "description": "Continuation of the Fabridash mod (originally made by EmaFire003) for newer versions of Minecraft! This adds dashing in form of 3 items or as an API for developers.",
   "authors": [
-    "Emafire003"
+    "DKXLY",
+    "EmaFire003"
   ],
   "contact": {
-    "homepage": "https://github.com/Emafire003/Fabridash",
-    "sources": "https://github.com/Emafire003/Fabridash",
-    "issues": "https://github.com/Emafire003/Fabridash/issues"
+    "homepage": "https://modrinth.com/mod/Fabridash-resurrected/",
+    "sources": "https://github.com/DKXLY/Fabridash-resurrected/",
+    "issues": "https://github.com/DKXLY/Fabridash-resurrected/issues/"
   },
 
   "license": "MIT",
-  "icon": "assets/fabridash/fabridash_icon.jpg",
+  "icon": "assets/fabridash_resurrected/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "me.emafire003.dev.fabridash.FabridashMod"
+      "net.dkxly.fabridash_resurrected.FabridashResurrectedMod"
     ],
     "client": [
-      "me.emafire003.dev.fabridash.FabridashClient"
+      "net.dkxly.fabridash_resurrected.FabridashResurrectedClient"
     ]
   },
   "mixins": [
-    "fabridash.mixins.json"
+    "fabridash_resurrected.mixins.json"
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.9",
+    "fabricloader": ">=0.14.25",
     "fabric-api": "*",
-    "minecraft": ">=1.17-",
+    "minecraft": ">=1.20",
     "java": ">=16"
   },
   "suggests": {
