@@ -1,9 +1,10 @@
 package net.dkxly.fabridash_resurrected.sounds;
 
 import net.dkxly.fabridash_resurrected.FabridashResurrectedMod;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 import static net.dkxly.fabridash_resurrected.FabridashResurrectedMod.LOGGER;
 
@@ -13,7 +14,7 @@ public class FabridashResurrectedSounds {
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(FabridashResurrectedMod.MOD_ID, name);
-        return Registry.register(Registry.SOUND_EVENT, id, new SoundEvent(id));
+        return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
     }
 
     public static void registerSounds() {
