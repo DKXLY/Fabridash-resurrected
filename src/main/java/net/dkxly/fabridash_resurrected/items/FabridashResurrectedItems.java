@@ -4,6 +4,8 @@ import net.dkxly.fabridash_resurrected.FabridashResurrectedMod;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
@@ -22,7 +24,7 @@ public class FabridashResurrectedItems {
             new DashGlobe(new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(64).group(ItemGroup.MISC)));
 
     private static Item registerItem(String name, Item item){
-        return Registry.register(Registry.ITEM, new Identifier(FabridashResurrectedMod.MOD_ID, name), item);
+        return Registry.register(Registries.ITEM, new Identifier(FabridashResurrectedMod.MOD_ID, name), item);
     }
 
     public static void registerItems(){
