@@ -1,8 +1,8 @@
-# Fabridash Mod
-With this mod you will be able to dash across your world, using 3 different items! And also, if you are a developer you may use this mod as an `API` to integrate dashing (get it? eheh) into your project! This fork is created as a way to continue using this mod in future Minecraft versions, I am NOT the original creator, the dashing code and the textures were made by [EmaFire003](https://github.com/emafire003/).
+## ❓ What is this?
+With this mod you will be able to dash across your world, using 3 different items! And also, if you are a developer you may use this mod as an `API` to integrate dashing into your project! This fork is created as a way to continue using this mod in future Minecraft versions, I am NOT the original creator, the dashing code was made by [EmaFire003](https://github.com/emafire003/).
 
-## The Dash items
-Unlike other mods, to perform a dash with this mod you will need to find some treasure first! A **`Dash Globe`** to be precise, and it can be found inside treasure chests from ancient cities, mineshafts and such! (with a chance that goes from a minimum of 12% in mineshafts to 30% in the end city).
+## ✨ Items
+To perform a dash with this mod, you will need to find some treasure first! A **`Dash Globe`** to be precise, and it can be found inside treasure chests from ancient cities, mineshafts and such! (with a chance that goes from a minimum of 12% in mineshafts to 30% in the end city).
 
 Once you obtain the core item, you may craft the actual "dashers" (yeah, I kinda like making puns):
 
@@ -43,24 +43,16 @@ This item will let you do a *backwards* dash, with a multiplier of 2 and a coold
 
 Whenever one of this gets activated you will hear a dash sound effect, and see some particles! 
 
-## Config & gamerule
-To have a higher boost for the dash you can use the `dashMultiplier` gamerule. This value will be *multiplied* by the default value of the items.
+## ⚙ Config & gamerule
+To have a stronger dash, you can use the `dashMultiplier` gamerule. This value will be *multiplied* by the default value of the items.
 
-There is also a config file, where you can disable the items entirely and only use this as an API
+There is also a config file, where you can disable the items entirely and only use this as an API.
 
-## For developers
-Once you've got the mod implemented into you project (See setup), you will simply need to call `Fabridash.dash(Entity entity, float power, boolean reversed)`
-The `entity` is the one that will perform the dash, the `power` is how far it will go and the `reversed` on **true** will make the entity go **backwards** instead of forward. And that's it.
-
-## Coming soon-ish 
-I will probably expand the ways in which you will be able to dash, going from a key press to maybe a "passive" ability, or a command. All of which will be togglable. This mod was born to create an API for future projects in need of a dash ability. Like my other (kind of "main") project [LightWithin](https://modrinth.com/mods/LightWithin)! (actually it was born because of that project like a few of my other libs)
-
-
-## Setup
-### Users
-Drag and drop the .jar file you have downloaded from curseforge/modrinth and drop it into your mods folder!
-### Developers
-If you want to use the api module of the mod, add it in your build.gradle, using modrnith's repo like this:
+## 🔨 Setup
+### 🎮 Users
+Download the mod from Modrinth and drop it into your mods folder!
+### 👨‍💻👩‍💻 Developers
+If you want to use the api module of the mod, add it in your build.gradle, using Modrnith's repo, like this:
 ```gradle
 repositories {
     maven {
@@ -73,11 +65,13 @@ repositories {
 }
 
 dependencies {
-    modImplementation "maven.modrinth:fabridash:<version>"
+    modImplementation "maven.modrinth:fabridash-resurrected:<version>"
 }
 ```
+Once you've got the mod implemented into you project, you will simply need to call `FabridashResurrected.dash(Entity entity, float power, boolean reversed);`
+The `entity` is the entity that will perform the dash, the `power` is how far it will go and the `reversed` on **true** will make the entity go **backwards** instead of forwards. And that's it.
+
 You could even extract the API module and use it as is, but remember to register the client reciver!
 
-## License
-
-This mod is available under the MIT license.
+## 📜 License
+This mod is available under the MIT license, however, it would be greatly appreciated to credit me (DKXLY) and EmaFire003, if you want to use it somewhere.
