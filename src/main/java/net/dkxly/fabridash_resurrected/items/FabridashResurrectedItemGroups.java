@@ -10,7 +10,7 @@ import static net.dkxly.fabridash_resurrected.FabridashResurrectedMod.*;
 public class FabridashResurrectedItemGroups {
     public static final ItemGroup FABRIDASH_RESURRECTED = FabricItemGroup.builder()
             .displayName(Text.literal("Fabridash Resurrected"))
-            .icon(() -> new ItemStack(FabridashResurrectedItems.DASH_GLOBE))
+            .icon(() -> new ItemStack(FabridashResurrectedItems.FABRIDASH_RESURRECTED_LOGO))
             .entries((displayContext, entries) -> {
                 for(int i = 0; i < itemList.size(); i++) {
                     entries.add(itemList.get(i));

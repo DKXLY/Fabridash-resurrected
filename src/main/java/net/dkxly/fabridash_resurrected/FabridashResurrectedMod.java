@@ -5,6 +5,7 @@ import net.dkxly.fabridash_resurrected.items.FabridashResurrectedItemGroups;
 import net.dkxly.fabridash_resurrected.items.FabridashResurrectedItems;
 import net.dkxly.fabridash_resurrected.sounds.FabridashResurrectedSounds;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.gamerule.v1.GameRuleFactory;
 import net.fabricmc.fabric.api.gamerule.v1.GameRuleRegistry;
 import net.minecraft.item.Item;

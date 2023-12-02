@@ -4,7 +4,7 @@
     "I": {
       "item": "minecraft:iron_block"
     },
-    "O": {
+    "D": {
       "item": "fabridash_resurrected:dash_globe"
     },
     "R": {
@@ -13,7 +13,7 @@
   },
   "pattern": [
     "RIR",
-    "IOI",
+    "IDI",
     "RIR"
   ],
   "result": {
