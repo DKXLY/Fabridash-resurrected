@@ -17,17 +17,25 @@ public class FabridashResurrectedItems {
             new Item(new FabricItemSettings())
     );
 
-    public static final Item IRON_DASHER = registerItem("iron_dasher",
+    public static final Item CALIBRATED_OBSIDIAN_DASHER = registerItem(
+            "calibrated_obsidian_dasher",
+            new CalibratedObsidianDasher(new FabricItemSettings().rarity(Rarity.EPIC).maxCount(1)));
+
+    public static final Item IRON_DASHER = registerItem(
+            "iron_dasher",
             new IronDasher(new FabricItemSettings().rarity(Rarity.RARE).maxCount(1)));
 
-    public static final Item DIAMOND_DASHER = registerItem("diamond_dasher",
+    public static final Item DIAMOND_DASHER = registerItem(
+            "diamond_dasher",
             new DiamondDasher(new FabricItemSettings().rarity(Rarity.EPIC).maxCount(1)));
 
-    public static final Item OBSIDIAN_DASHER = registerItem("obsidian_dasher",
+    public static final Item OBSIDIAN_DASHER = registerItem(
+            "obsidian_dasher",
             new ObsidianDasher(new FabricItemSettings().rarity(Rarity.EPIC).maxCount(1)));
 
-    public static final Item DASH_GLOBE = registerItem("dash_globe",
-            new DashGlobe(new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(64)));
+    public static final Item DASH_GLOBE = registerItem(
+            "dash_globe",
+            new DashGlobe(new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(16)));
 
     private static Item registerItem(String name, Item item){
         Item registryEntry = Registry.register(Registries.ITEM, new Identifier(FabridashResurrectedMod.MOD_ID, name), item);

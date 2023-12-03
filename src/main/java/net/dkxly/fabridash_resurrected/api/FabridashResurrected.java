@@ -20,10 +20,32 @@ public class FabridashResurrected {
      * With this you can launch (or "dash") an entity forwards or backwards
      *
      * @param entity The entity that will perform the dash/will be launched
-     * @param power The power of the dash aka how far it will go
-     * @param reversed Weather to reverse the direction of the dash or no*/
-    public static void dash(Entity entity, float power, boolean reversed){
+     * @param power The power of the dash AKA how far it will go
+     * @param direction The direction in which the dash will go, 0 - forwards, 1 - to the right, 2 - backwards, 3 - to the left
+     * */
+    public static void dash(Entity entity, float power, int direction){
         float f = entity.getYaw();
+        if (direction == 0) {
+            f = entity.getYaw();
+        } else if (direction == 1) {
+            f = entity.getYaw();
+            f += 90;
+            if (f > 360) {
+                f = f - 360;
+            }
+        } else if (direction == 2) {
+            f = entity.getYaw();
+            f += 180;
+            if (f > 360) {
+                f = f - 360;
+            }
+        } else if (direction == 3) {
+            f = entity.getYaw();
+            f += 270;
+            if (f > 360) {
+                f = f - 360;
+            }
+        }
         float g = entity.getPitch();
         float h = -MathHelper.sin(f * 0.017453292F) * MathHelper.cos(g * 0.017453292F);
         float k = -MathHelper.sin(g * 0.017453292F);
@@ -33,11 +55,8 @@ public class FabridashResurrected {
         h *= n / m;
         k *= n / m;
         l *= n / m;
-        if(reversed){
-            entity.addVelocity(-h, k, -l);
-        }else{
-            entity.addVelocity(h, k, l);
-        }
+        entity.addVelocity(h, k, l);
+
         if(entity instanceof ServerPlayerEntity){
             sendVelocityPacket((ServerPlayerEntity) entity, entity.getVelocity());
         }

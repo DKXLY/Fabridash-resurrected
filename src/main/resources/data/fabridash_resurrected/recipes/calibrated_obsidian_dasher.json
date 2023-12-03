@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "AAA",
+        "AOA",
+        "AAA"
+    ],
+    "key": {
+        "A": {
+            "item": "minecraft:amethyst_shard"
+        },
+        "O": {
+            "item": "fabridash_resurrected:obsidian_dasher"
+        }
+    },
+    "result": {
+        "item": "fabridash_resurrected:calibrated_obsidian_dasher",
+        "count": 1
+    }
+}
