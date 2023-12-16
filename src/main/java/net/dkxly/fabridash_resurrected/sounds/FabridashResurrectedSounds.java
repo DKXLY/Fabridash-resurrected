@@ -3,6 +3,7 @@ package net.dkxly.fabridash_resurrected.sounds;
 import net.dkxly.fabridash_resurrected.FabridashResurrectedMod;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 

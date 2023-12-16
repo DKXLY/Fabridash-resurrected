@@ -3,8 +3,10 @@ package net.dkxly.fabridash_resurrected.api;
 import net.dkxly.fabridash_resurrected.sounds.FabridashResurrectedSounds;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.ModStatus;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
@@ -64,12 +66,18 @@ public class FabridashResurrected {
         for(int i = 0; i<50; i++){
             entity.getWorld().addParticle(ParticleTypes.CLOUD, entity.getX()+random.nextFloat(), entity.getY()+random.nextFloat(), entity.getZ()+random.nextFloat(), 0, 0.1, 0);
         }
-        entity.playSound(FabridashResurrectedSounds.DASH, 1, 1);
+
+        if (entity instanceof PlayerEntity playerEntity) {
+            playerEntity.playSound(FabridashResurrectedSounds.DASH, SoundCategory.PLAYERS, 1, 1);
+        } else {
+            entity.playSound(FabridashResurrectedSounds.DASH, 1, 1);
+        }
     }
 
-    /**This method will send a packet to the client, sending the velocity
+    /* This method will send a packet to the client, sending the velocity
      * calculated by the server to not cause desyncs. You normally don't need
-     * to use it.*/
+     * to use it.
+     */
     public static void sendVelocityPacket(ServerPlayerEntity player, Vec3d vel){
         LOGGER.info("Sending the packet, with this vel: "+ vel);
         try{
