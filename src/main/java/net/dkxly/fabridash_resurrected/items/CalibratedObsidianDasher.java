@@ -75,8 +75,6 @@ public class CalibratedObsidianDasher extends Item {
                     case 3: stack.getNbt().putInt("direction", 0); stack.getNbt().putInt("CustomModelData", 0); break;
                 }
             } catch (Exception ignored) {}
-
-            user.getItemCooldownManager().set(this, 1);
         } else {
             user.getItemCooldownManager().set(this, 100);
             if(!world.isClient){
