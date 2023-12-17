@@ -17,6 +17,10 @@ public class FabridashResurrectedItems {
             new Item(new FabricItemSettings())
     );
 
+    public static final Item CALIBRATED_NETHERITE_PLATED_OBSIDIAN_DASHER = registerItem(
+            "calibrated_netherite_plated_obsidian_dasher",
+            new CalibratedNetheritePlatedObsidianDasher(new FabricItemSettings().rarity(Rarity.EPIC).maxCount(1).fireproof()));
+
     public static final Item CALIBRATED_OBSIDIAN_DASHER = registerItem(
             "calibrated_obsidian_dasher",
             new CalibratedObsidianDasher(new FabricItemSettings().rarity(Rarity.EPIC).maxCount(1)));

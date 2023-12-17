@@ -1,0 +1,32 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "fabridash_resurrected:item/calibrated_netherite_plated_obsidian_dasher/0"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 0
+      },
+      "model": "fabridash_resurrected:item/calibrated_netherite_plated_obsidian_dasher/0"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 1
+      },
+      "model": "fabridash_resurrected:item/calibrated_netherite_plated_obsidian_dasher/1"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 2
+      },
+      "model": "fabridash_resurrected:item/calibrated_netherite_plated_obsidian_dasher/2"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 3
+      },
+      "model": "fabridash_resurrected:item/calibrated_netherite_plated_obsidian_dasher/3"
+    }
+  ]
+}

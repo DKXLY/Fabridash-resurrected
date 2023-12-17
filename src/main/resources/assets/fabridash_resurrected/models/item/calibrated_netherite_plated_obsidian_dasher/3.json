@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "fabridash_resurrected:item/calibrated_netherite_plated_obsidian_dasher/3"
+  }
+}

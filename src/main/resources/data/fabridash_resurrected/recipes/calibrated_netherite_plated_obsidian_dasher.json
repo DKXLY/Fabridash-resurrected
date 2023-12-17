@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "n n",
+        " C ",
+        "n n"
+    ],
+    "key": {
+        "n": {
+            "item": "minecraft:netherite_scrap"
+        },
+        "C": {
+            "item": "fabridash_resurrected:calibrated_obsidian_dasher"
+        }
+    },
+    "result": {
+        "item": "fabridash_resurrected:calibrated_netherite_plated_obsidian_dasher",
+        "count": 1
+    }
+}
