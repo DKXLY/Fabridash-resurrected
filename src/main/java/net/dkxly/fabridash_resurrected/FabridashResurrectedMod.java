@@ -48,7 +48,7 @@ public class FabridashResurrectedMod implements ModInitializer {
     }
 
     /**
-     * Should items (iron dasher, diamond dasher, ecc)
+     * Should items (iron dasher, diamond dasher, etc.)
      * be added by this mod instance?
      *
      * @param b Set this to falso to disable items, true (default) to enable them

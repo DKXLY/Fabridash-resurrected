@@ -24,12 +24,12 @@ public class FabridashResurrectedClient implements ClientModInitializer {
             var results = VelocityPacketS2C.read(buf);
 
             client.execute(() -> {
-                try{
+                try {
                     client.player.setVelocity(results);
                     client.player.playSound(FabridashResurrectedSounds.DASH, 1, 1);
-                }catch (NoSuchElementException e){
+                } catch (NoSuchElementException e){
                     LOGGER.warn("No value in the packet, probably not a big problem");
-                }catch (Exception e){
+                } catch (Exception e){
                     LOGGER.error("There was an error while getting the packet!");
                     e.printStackTrace();
                 }

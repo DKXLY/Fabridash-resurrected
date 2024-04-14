@@ -44,6 +44,7 @@ public class FabridashResurrectedItems {
     private static Item registerItem(String name, Item item){
         Item registryEntry = Registry.register(Registries.ITEM, new Identifier(FabridashResurrectedMod.MOD_ID, name), item);
         itemList.add(registryEntry);
+
         return registryEntry;
     }
 

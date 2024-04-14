@@ -19,6 +19,7 @@ import java.util.List;
 
 public class CalibratedObsidianDasher extends Item {
     public CalibratedObsidianDasher(Settings settings) {
+
         super(settings);
     }
 
@@ -38,6 +39,8 @@ public class CalibratedObsidianDasher extends Item {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         try {
             if (stack.getNbt().getInt("direction") >= 4 || stack.getNbt().getInt("direction") <= -1) {
+                world.getServer().sendMessage(Text.literal("For the love of god please don't change NBT stuff if you don't want something to break really badly").formatted(Formatting.RED));
+                world.getServer().sendMessage(Text.literal("Defaulting the direction NBT tag to 0").formatted(Formatting.RED));
                 FabridashResurrectedMod.LOGGER.info("For the love of god please don't change NBT stuff if you don't want something to break really badly");
                 FabridashResurrectedMod.LOGGER.info("Defaulting the direction NBT tag to 0");
                 stack.getNbt().putInt("direction", 0);

@@ -5,16 +5,13 @@
       "item": "fabridash_resurrected:iron_dasher"
     },
     "D": {
-      "item": "minecraft:diamond_block"
-    },
-    "R": {
-      "item": "minecraft:redstone_block"
+      "item": "minecraft:diamond"
     }
   },
   "pattern": [
-    "RDR",
+    "DDD",
     "DID",
-    "RDR"
+    "DDD"
   ],
   "result": {
     "item": "fabridash_resurrected:diamond_dasher"

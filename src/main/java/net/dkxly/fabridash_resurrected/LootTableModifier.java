@@ -40,7 +40,7 @@ public class LootTableModifier {
 
     public static void modifyLootTables() {
         FabridashResurrectedMod.LOGGER.info("Modifying loot tables to generate the dash globe...");
-        float chance = 0.15f;
+        float chance = 0.25f;
         LootTableEvents.MODIFY.register(((resourceManager, manager, id, supplier, setter) -> {
             if (IGLOO_STRUCTURE_CHEST_ID.equals(id)) {
                 LootPool.Builder poolBuilder1 = LootPool.builder()

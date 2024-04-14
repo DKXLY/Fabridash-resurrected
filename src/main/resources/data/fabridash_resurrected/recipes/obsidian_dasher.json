@@ -9,9 +9,9 @@
     }
   },
   "pattern": [
-    " O ",
+    "OOO",
     "ODO",
-    " O "
+    "OOO"
   ],
   "result": {
     "item": "fabridash_resurrected:obsidian_dasher"
