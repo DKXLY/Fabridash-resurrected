@@ -1,15 +1,15 @@
-<!-- SVG version -->
-<img alt="fabric-api" height="40" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/requires/fabric-api_vector.svg"> <!-- SVG version -->
-<img alt="fabric" height="40" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/supported/fabric_vector.svg"> <!-- SVG version -->
-<img alt="github" height="40" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/available/github_vector.svg">
+<img alt="fabric" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/fabric_vector.svg">
+<img alt="quilt" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/quilt_vector.svg">
+
+# 📋 NOTE FOR QUILT USERS:
+Although the mod SHOULD work on Quilt even above versions `1.20.1`, be aware that there might be unexpected bugs due to the fact that QFAPI (Quilted Fabric API) is still in alpha on Minecraft versions higher than `1.20.1`.
 
 # ❓ What is this?
-With this mod, you will be able to **dash** across your world using 3 different items! And also, if you are a developer, you may use this mod as an `API` to integrate dashing into your project!
+With this mod, you will be able to **dash** across your world using 5 different items! And also, if you are a developer, you may use this mod as an `API` to integrate dashing into your project!
 This fork is created as a way to continue using this mod in future Minecraft versions, I am NOT the original creator, the **dashing** code was made by **Emafire003**: [Modrinth](https://modrinth.com/user/emafire003/) / [Github](https://github.com/emafire003/).
 
 # ✨ Items
-To perform a **dash** with this mod, you will need to find some **treasure** first! A **`Dash Globe`** to be precise, and it can be found inside **treasure chests** from **Ancient cities**, **Mineshafts** and such! 
-With a chance that goes from a minimum of 12% in **Mineshafts** to 30% in **End Cities**.
+To perform a **dash** with this mod, you will need to find some **treasure** first! A **`Dash Globe`** to be precise, and it can be found inside **treasure chests** from **Ancient cities**, **Mineshafts** and such!
 
 Once you obtain the **`Dash Globe`**, you may craft the actual **Dashers**.
 
@@ -17,13 +17,13 @@ You can dash by right clicking the **Dasher** item. TIP: **Jump while dashing to
 
 |Ingredients|Recipe|Output|Notes|
 | - | - | - | - |
-| `Dash Globe - 1`,<br> `Iron Block - 4`, <br>`Redstone Block - 4` | ![iron_dasher](https://cdn.jsdelivr.net/gh/DKXLY/desc-assets@main/iron_dasher.png) | `Iron Dasher` | *Provides a decent dash (multiplier of 1) with a cooldown of 80 ticks.* |
-| `Iron Dasher - 1`,<br> `Diamond Block - 4`, <br>`Redstone Block - 4` | ![diamond_dasher](https://cdn.jsdelivr.net/gh/DKXLY/desc-assets@main/diamond_dasher.png) | `Diamond Dasher` | *Provides a bigger dash (multiplier 2) with a cooldown of 120 ticks.* |
-| `Diamond Dasher - 1`,<br> `Obsidian - 4` | ![gold_plated_emerald_block](https://cdn.jsdelivr.net/gh/DKXLY/desc-assets@main/obsidian_dasher.png) |`Obsidian Dasher`| *Provides a backwards dash, with a multiplier of 2 and a cooldown of 120 ticks (just like the diamond one, but reversed in direction).* |
-| `Obsidian Dasher - 1`, <br> `Amethyst Shard - 8` | ![calibrated_obsidian_dasher](https://cdn.jsdelivr.net/gh/DKXLY/desc-assets@main/calibrated_obsidian_dasher.png) | `Calibrated Obsidian Dasher` | *Provides a dash with a multiplier of 2 and a cooldown of 100 ticks. The dash direction can be customized by shift right-clicking it.*|
-| `Calibrated Obsidian Dasher - 1`, <br> `Netherite Scrap - 4` | ![calibrated_netherite_plated_obsidian_dasher](https://cdn.jsdelivr.net/gh/DKXLY/desc-assets@main/calibrated_netherite_plated_obsidian_dasher.png) | `Calibrated Netherite-plated Obsidian Dasher` | *Same behaviour as `Calibrated Obsidian Dasher`, but fire- and lava-proof.* |
+| `Dash Globe - 1`,<br> `Iron Block - 4`, <br>`Redstone Block - 4` | ![iron_dasher](https://raw.githubusercontent.com/DKXLY/desc-assets/main/iron_dasher.png) | `Iron Dasher` | *Provides a decent dash (multiplier of 1) with a cooldown of 80 ticks.* |
+| `Iron Dasher - 1`,<br> `Diamond - 8` | ![diamond_dasher](https://raw.githubusercontent.com/DKXLY/desc-assets/main/diamond_dasher.png) | `Diamond Dasher` | *Provides a bigger dash (multiplier 2) with a cooldown of 120 ticks.* |
+| `Diamond Dasher - 1`,<br> `Obsidian - 8` | ![obsidian_dasher](https://raw.githubusercontent.com/DKXLY/desc-assets/main/obsidian_dasher.png) |`Obsidian Dasher`| *Provides a backwards dash, with a multiplier of 2 and a cooldown of 120 ticks (just like the diamond one, but reversed in direction).* |
+| `Obsidian Dasher - 1`, <br> `Amethyst Shard - 8` | ![calibrated_obsidian_dasher](https://raw.githubusercontent.com/DKXLY/desc-assets/main/calibrated_obsidian_dasher.png) | `Calibrated Obsidian Dasher` | *Provides a dash with a multiplier of 2 and a cooldown of 100 ticks. The dash direction can be customized by sneaking and right-clicking.*|
+| `Calibrated Obsidian Dasher - 1`, <br> `Netherite Scrap - 8` | ![calibrated_netherite_plated_obsidian_dasher](https://raw.githubusercontent.com/DKXLY/desc-assets/main/calibrated_netherite_plated_obsidian_dasher.png) | `Calibrated Netherite-plated Obsidian Dasher` | *Provides a dash with a multiplier of 5 and a cooldown of 80 ticks. The dash direction can be customized by sneaking and right-clicking.* |
 
-Whenever one of these gets activated, you will hear a **dash sound effect**, and see some **particles**! 
+Whenever one of these gets activated, you will hear a **dash sound effect**, and (maybe?) see some **particles**! 
 
 # 🔆 Config & gamerule
 To have a stronger **dash**, you can use the `dashMultiplier` gamerule. This value will be *multiplied* by the default value of the items.
