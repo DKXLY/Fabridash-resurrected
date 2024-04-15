@@ -23,9 +23,9 @@ public class DiamondDasher extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.literal("Right-click to dash").formatted(Formatting.GOLD));
-        tooltip.add(Text.literal(""));
-        tooltip.add(Text.literal("TIP: Jump while dashing to go farther.").formatted(Formatting.GRAY));
+        tooltip.add(Text.of("§6Right-click to dash"));
+        tooltip.add(Text.of(""));
+        tooltip.add(Text.of("§7TIP: Jump while dashing to go farther."));
         super.appendTooltip(stack, world, tooltip, context);
     }
 

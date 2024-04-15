@@ -9,7 +9,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -39,8 +38,6 @@ public class CalibratedNetheritePlatedObsidianDasher extends Item {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         try {
             if (stack.getNbt().getInt("direction") >= 4 || stack.getNbt().getInt("direction") <= -1) {
-                world.getServer().sendMessage(Text.literal("For the love of god please don't change NBT stuff if you don't want something to break really badly").formatted(Formatting.RED));
-                world.getServer().sendMessage(Text.literal("Defaulting the direction NBT tag to 0").formatted(Formatting.RED));
                 FabridashResurrectedMod.LOGGER.info("For the love of god please don't change NBT stuff if you don't want something to break really badly");
                 FabridashResurrectedMod.LOGGER.info("Defaulting the direction NBT tag to 0");
                 stack.getNbt().putInt("direction", 0);
@@ -58,10 +55,10 @@ public class CalibratedNetheritePlatedObsidianDasher extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.literal("Right-click to dash").formatted(Formatting.GOLD));
-        tooltip.add(Text.literal("Shift Right-click to change the dash direction").formatted(Formatting.GRAY, Formatting.ITALIC));
-        tooltip.add(Text.literal(""));
-        tooltip.add(Text.literal("TIP: Jump while dashing to go farther.").formatted(Formatting.GRAY));
+        tooltip.add(Text.of("§6Right-click to dash"));
+        tooltip.add(Text.of("§7§oShift Right-click to change the dash direction"));
+        tooltip.add(Text.of(""));
+        tooltip.add(Text.of("§7TIP: Jump while dashing to go farther."));
         super.appendTooltip(stack, world, tooltip, context);
     }
 

@@ -1,8 +1,8 @@
 package net.dkxly.fabridash_resurrected;
 
 import net.dkxly.fabridash_resurrected.items.FabridashResurrectedItems;
-import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
-import net.minecraft.loot.LootPool;
+import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
+import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
@@ -10,10 +10,7 @@ import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
 
-//Will be able to find the globe in various loot chests, with a chance between 9%-30% in the end city
 public class LootTableModifier {
-    private static final Identifier ANCIENT_CITY
-            = new Identifier("minecraft", "chests/ancient_city");
 
     private static final Identifier MINESHAFT
             = new Identifier("minecraft", "chests/abandoned_mineshaft");
@@ -40,103 +37,83 @@ public class LootTableModifier {
 
     public static void modifyLootTables() {
         FabridashResurrectedMod.LOGGER.info("Modifying loot tables to generate the dash globe...");
-        float chance = 0.25f;
-        LootTableEvents.MODIFY.register(((resourceManager, manager, id, supplier, setter) -> {
+        float chance = 0.38f;
+
+        LootTableLoadingCallback.EVENT.register((((resourceManager, manager, id, supplier, setter) -> {
             if (IGLOO_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder1 = LootPool.builder()
+                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(chance))
                         .with(ItemEntry.builder(FabridashResurrectedItems.DASH_GLOBE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.pool(poolBuilder1.build());
-
+                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                supplier.withPool(poolBuilder.build());
             }
-        }));
+        })));
 
-        LootTableEvents.MODIFY.register(((resourceManager, manager, id, supplier, setter) -> {
+        LootTableLoadingCallback.EVENT.register((((resourceManager, manager, id, supplier, setter) -> {
             if (MINESHAFT.equals(id)) {
-
-                LootPool.Builder poolBuilder1 = LootPool.builder()
+                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(chance-0.06f))
+                        .conditionally(RandomChanceLootCondition.builder(chance - 0.06f))
                         .with(ItemEntry.builder(FabridashResurrectedItems.DASH_GLOBE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
-                supplier.pool(poolBuilder1.build());
+                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
+                supplier.withPool(poolBuilder.build());
             }
-        }));
+        })));
 
-        LootTableEvents.MODIFY.register(((resourceManager, manager, id, supplier, setter) -> {
+        LootTableLoadingCallback.EVENT.register((((resourceManager, manager, id, supplier, setter) -> {
             if (SHIPWRECK_MAP.equals(id)) {
-
-                LootPool.Builder poolBuilder1 = LootPool.builder()
+                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(chance+0.1f))
+                        .conditionally(RandomChanceLootCondition.builder(chance + 0.1f))
                         .with(ItemEntry.builder(FabridashResurrectedItems.DASH_GLOBE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.pool(poolBuilder1.build());
+                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                supplier.withPool(poolBuilder.build());
             }
-        }));
+        })));
 
-        LootTableEvents.MODIFY.register(((resourceManager, manager, id, supplier, setter) -> {
+        LootTableLoadingCallback.EVENT.register((((resourceManager, manager, id, supplier, setter) -> {
             if (SIMPLE_DUNGEON.equals(id)) {
-
-                LootPool.Builder poolBuilder1 = LootPool.builder()
+                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(chance))
                         .with(ItemEntry.builder(FabridashResurrectedItems.DASH_GLOBE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.pool(poolBuilder1.build());
+                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                supplier.withPool(poolBuilder.build());
             }
-        }));
+        })));
 
-        LootTableEvents.MODIFY.register(((resourceManager, manager, id, supplier, setter) -> {
+        LootTableLoadingCallback.EVENT.register((((resourceManager, manager, id, supplier, setter) -> {
             if (PILLAGER_OUTPOST.equals(id)) {
-
-                LootPool.Builder poolBuilder1 = LootPool.builder()
+                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(chance+0.03f))
+                        .conditionally(RandomChanceLootCondition.builder(chance + 0.03f))
                         .with(ItemEntry.builder(FabridashResurrectedItems.DASH_GLOBE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.pool(poolBuilder1.build());
-
+                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                supplier.withPool(poolBuilder.build());
             }
-        }));
+        })));
 
-        LootTableEvents.MODIFY.register(((resourceManager, manager, id, supplier, setter) -> {
+        LootTableLoadingCallback.EVENT.register((((resourceManager, manager, id, supplier, setter) -> {
             if (STRONGHOLD_LIBRARY.equals(id)) {
-
-                LootPool.Builder poolBuilder1 = LootPool.builder()
+                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(chance))
                         .with(ItemEntry.builder(FabridashResurrectedItems.DASH_GLOBE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.pool(poolBuilder1.build());
-
+                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                supplier.withPool(poolBuilder.build());
             }
-        }));
+        })));
 
-        LootTableEvents.MODIFY.register(((resourceManager, manager, id, supplier, setter) -> {
+        LootTableLoadingCallback.EVENT.register((((resourceManager, manager, id, supplier, setter) -> {
             if (END_CITY_TREASURE.equals(id)) {
-
-                LootPool.Builder poolBuilder1 = LootPool.builder()
+                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(chance+0.1f))
+                        .conditionally(RandomChanceLootCondition.builder(chance + 0.1f))
                         .with(ItemEntry.builder(FabridashResurrectedItems.DASH_GLOBE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.pool(poolBuilder1.build());
+                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                supplier.withPool(poolBuilder.build());
             }
-        }));
-
-        LootTableEvents.MODIFY.register(((resourceManager, manager, id, supplier, setter) -> {
-            if (ANCIENT_CITY.equals(id)) {
-
-                LootPool.Builder poolBuilder1 = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(chance+0.06f))
-                        .with(ItemEntry.builder(FabridashResurrectedItems.DASH_GLOBE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.pool(poolBuilder1.build());
-            }
-        }));
+        })));
     }
 }
