@@ -1,5 +1,4 @@
-<img alt="fabric" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/fabric_vector.svg">
-<img alt="quilt" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/quilt_vector.svg">
+<img alt="fabric" height="64" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/fabric_vector.svg">   <img alt="quilt" height="64" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/quilt_vector.svg">
 
 # 📋 NOTE FOR QUILT USERS:
 Although the mod SHOULD work on Quilt even above versions `1.20.1`, be aware that there might be unexpected bugs due to the fact that QFAPI (Quilted Fabric API) is still in alpha on Minecraft versions higher than `1.20.1`.
@@ -17,11 +16,11 @@ You can dash by right clicking the **Dasher** item. TIP: **Jump while dashing to
 
 |Ingredients|Recipe|Output|Notes|
 | - | - | - | - |
-| `Dash Globe - 1`,<br> `Iron Block - 4`, <br>`Redstone Block - 4` | ![iron_dasher](https://raw.githubusercontent.com/DKXLY/desc-assets/main/iron_dasher.png) | `Iron Dasher` | *Provides a decent dash (multiplier of 1) with a cooldown of 80 ticks.* |
-| `Iron Dasher - 1`,<br> `Diamond - 8` | ![diamond_dasher](https://raw.githubusercontent.com/DKXLY/desc-assets/main/diamond_dasher.png) | `Diamond Dasher` | *Provides a bigger dash (multiplier 2) with a cooldown of 120 ticks.* |
-| `Diamond Dasher - 1`,<br> `Obsidian - 8` | ![obsidian_dasher](https://raw.githubusercontent.com/DKXLY/desc-assets/main/obsidian_dasher.png) |`Obsidian Dasher`| *Provides a backwards dash, with a multiplier of 2 and a cooldown of 120 ticks (just like the diamond one, but reversed in direction).* |
-| `Obsidian Dasher - 1`, <br> `Amethyst Shard - 8` | ![calibrated_obsidian_dasher](https://raw.githubusercontent.com/DKXLY/desc-assets/main/calibrated_obsidian_dasher.png) | `Calibrated Obsidian Dasher` | *Provides a dash with a multiplier of 2 and a cooldown of 100 ticks. The dash direction can be customized by sneaking and right-clicking.*|
-| `Calibrated Obsidian Dasher - 1`, <br> `Netherite Scrap - 8` | ![calibrated_netherite_plated_obsidian_dasher](https://raw.githubusercontent.com/DKXLY/desc-assets/main/calibrated_netherite_plated_obsidian_dasher.png) | `Calibrated Netherite-plated Obsidian Dasher` | *Provides a dash with a multiplier of 5 and a cooldown of 80 ticks. The dash direction can be customized by sneaking and right-clicking.* |
+| `Dash Globe - 1`,<br> `Iron Block - 4`, <br>`Redstone Block - 4` | ![iron_dasher](https://raw.githubusercontent.com/DKXLY/desc-assets/main/iron_dasher.png) | `Iron Dasher` | *Provides a dash with a multiplier of 1 and a cooldown of 80 ticks.* |
+| `Iron Dasher - 1`,<br> `Diamond - 8` | ![diamond_dasher](https://raw.githubusercontent.com/DKXLY/desc-assets/main/diamond_dasher.png) | `Diamond Dasher` | *Provides a dash with a multiplier of 3 and a cooldown of 120 ticks.* |
+| `Diamond Dasher - 1`,<br> `Obsidian - 8` | ![obsidian_dasher](https://raw.githubusercontent.com/DKXLY/desc-assets/main/obsidian_dasher.png) |`Obsidian Dasher`| *Provides a backwards dash, with a multiplier of 3 and a cooldown of 120 ticks (just like the diamond one, but reversed in direction).* |
+| `Obsidian Dasher - 1`, <br> `Amethyst Shard - 8` | ![calibrated_obsidian_dasher](https://raw.githubusercontent.com/DKXLY/desc-assets/main/calibrated_obsidian_dasher.png) | `Calibrated Obsidian Dasher` | *Provides a dash with a multiplier of 3 and a cooldown of 100 ticks. The dash direction can be customized by sneaking and right-clicking.*|
+| `Calibrated Obsidian Dasher - 1`, <br> `Netherite Scrap - 6`, <br> `Netherite Ingot - 2` | ![calibrated_netherite_plated_obsidian_dasher](https://raw.githubusercontent.com/DKXLY/desc-assets/main/calibrated_netherite_plated_obsidian_dasher.png) | `Calibrated Netherite-plated Obsidian Dasher` | *Provides a dash with a multiplier of 5 and a cooldown of 80 ticks. The dash direction can be customized by sneaking and right-clicking.* |
 
 Whenever one of these gets activated, you will hear a **dash sound effect**, and (maybe?) see some **particles**! 
 
