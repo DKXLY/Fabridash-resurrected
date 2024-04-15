@@ -1,5 +1,4 @@
-<img alt="fabric" height="64" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/fabric_vector.svg">
-<img alt="quilt" height="64" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/quilt_vector.svg">
+<img alt="fabric" height="64" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/fabric_vector.svg"><img alt="quilt" height="64" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/quilt_vector.svg">
 
 # 📋 NOTE FOR QUILT USERS:
 Although the mod SHOULD work on Quilt even above versions `1.20.1`, be aware that there might be unexpected bugs due to the fact that QFAPI (Quilted Fabric API) is still in alpha on Minecraft versions higher than `1.20.1`.
