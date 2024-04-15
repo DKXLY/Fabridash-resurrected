@@ -1,5 +1,5 @@
 {
-  "gamerule.dashMultiplier": "[Fabridash Resurrected] The value which will be used to multiply all dash values that are included in this mod.",
+  "gamerule.dashMultiplier": "[Fabridash Resurrected] The value which will be used to multiply all dash values that are included in the mod's items.",
   "item.fabridash_resurrected.iron_dasher": "Iron Dasher",
   "item.fabridash_resurrected.diamond_dasher": "Diamond Dasher",
   "item.fabridash_resurrected.obsidian_dasher": "Obsidian Dasher",
