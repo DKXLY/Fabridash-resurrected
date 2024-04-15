@@ -31,7 +31,7 @@ There is also a config file, where you can disable the items entirely and only u
 
 # 🔨 Setup
 ## 🎮 Users
-Download the mod from `Modrinth` and drop it into your mods folder!
+Download the mod from `Modrinth` and drop it into your mods folder with `Fabric API`!
 ## 👨‍💻👩‍💻 Developers
 If you want to use the `API` module of the mod, add it in your build.gradle, using `Modrinth`'s repo, like this:
 ```gradle
