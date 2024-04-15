@@ -1,13 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "nnn",
+        "nNn",
         "nCn",
-        "nnn"
+        "nNn"
     ],
     "key": {
         "n": {
             "item": "minecraft:netherite_scrap"
+        },
+        "N": {
+            "item": "minecraft:netherite_ingot"
         },
         "C": {
             "item": "fabridash_resurrected:calibrated_obsidian_dasher"

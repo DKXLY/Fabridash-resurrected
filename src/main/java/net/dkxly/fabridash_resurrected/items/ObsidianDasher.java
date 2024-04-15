@@ -33,7 +33,7 @@ public class ObsidianDasher extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         user.getItemCooldownManager().set(this, 120);
         if(!world.isClient){
-            FabridashResurrected.dash(user, 2*world.getGameRules().getInt(FabridashResurrectedMod.DASH_MULTIPLIER), 2);
+            FabridashResurrected.dash(user, 3*world.getGameRules().getInt(FabridashResurrectedMod.DASH_MULTIPLIER), 2);
         }
         return TypedActionResult.pass(user.getStackInHand(hand));
     }
