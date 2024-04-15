@@ -82,7 +82,7 @@ public class CalibratedObsidianDasher extends Item {
             user.getItemCooldownManager().set(this, 100);
             if(!world.isClient){
                 try {
-                    FabridashResurrected.dash(user, 2*world.getGameRules().getInt(FabridashResurrectedMod.DASH_MULTIPLIER), stack.getNbt().getInt("direction"));
+                    FabridashResurrected.dash(user, 3*world.getGameRules().getInt(FabridashResurrectedMod.DASH_MULTIPLIER), stack.getNbt().getInt("direction"));
                 } catch (Exception ignored) {}
             }
         }
