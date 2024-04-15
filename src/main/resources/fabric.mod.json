@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Fabridash Resurrected",
-  "description": "Continuation of the Fabridash mod (originally made by EmaFire003) for newer versions of Minecraft! This adds dashing in form of various items or as an API for developers.",
+  "description": "Continuation of the Fabridash mod (originally made by EmaFire003) for newer versions of Minecraft! This adds dashing in the form of various items or as an API for developers.",
   "authors": [
     "DKXLY",
     "Emafire003"
