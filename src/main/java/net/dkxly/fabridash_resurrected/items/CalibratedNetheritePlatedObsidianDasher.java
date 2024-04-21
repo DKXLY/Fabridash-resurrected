@@ -17,9 +17,10 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
+import static net.dkxly.fabridash_resurrected.FabridashResurrectedMod.*;
+
 public class CalibratedNetheritePlatedObsidianDasher extends Item {
     public CalibratedNetheritePlatedObsidianDasher(Item.Settings settings) {
-
         super(settings);
     }
 
@@ -58,10 +59,19 @@ public class CalibratedNetheritePlatedObsidianDasher extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.literal("Right-click to dash").formatted(Formatting.GOLD));
-        tooltip.add(Text.literal("Shift Right-click to change the dash direction").formatted(Formatting.GRAY, Formatting.ITALIC));
-        tooltip.add(Text.literal(""));
-        tooltip.add(Text.literal("TIP: Jump while dashing to go farther.").formatted(Formatting.GRAY));
+        if (FABRIDASH_RESURRECTED_CONFIG.item_functionality()) {
+            tooltip.add(Text.literal("Right-click to dash").formatted(Formatting.GOLD));
+            tooltip.add(Text.literal("Shift Right-click to change the dash direction").formatted(Formatting.GRAY, Formatting.ITALIC));
+            tooltip.add(Text.empty());
+            tooltip.add(Text.literal("TIP: Jump while dashing to go farther.").formatted(Formatting.GRAY));
+        } else {
+            tooltip.add(Text.empty());
+            tooltip.add(Text.literal("ITEM DISABLED").formatted(Formatting.DARK_RED, Formatting.BOLD));
+            tooltip.add(Text.literal("Change the configuration in").formatted(Formatting.GRAY));
+            tooltip.add(Text.literal("Mod menu or in the file to").formatted(Formatting.GRAY));
+            tooltip.add(Text.literal("enable item functionality.").formatted(Formatting.GRAY));
+        }
+
         super.appendTooltip(stack, world, tooltip, context);
     }
 
@@ -69,23 +79,43 @@ public class CalibratedNetheritePlatedObsidianDasher extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
 
-        if (user.isSneaking()) {
-            try {
-                switch ((stack.getNbt().getInt("direction"))) {
-                    case 0: stack.getNbt().putInt("direction", 1); stack.getNbt().putInt("CustomModelData", 1); break;
-                    case 1: stack.getNbt().putInt("direction", 2); stack.getNbt().putInt("CustomModelData", 2); break;
-                    case 2: stack.getNbt().putInt("direction", 3); stack.getNbt().putInt("CustomModelData", 3); break;
-                    case 3: stack.getNbt().putInt("direction", 0); stack.getNbt().putInt("CustomModelData", 0); break;
-                }
-            } catch (Exception ignored) {}
-        } else {
-            user.getItemCooldownManager().set(this, 80);
-            if(!world.isClient){
+        if (FABRIDASH_RESURRECTED_CONFIG.item_functionality()) {
+            if (user.isSneaking()) {
                 try {
-                    FabridashResurrected.dash(user, 5*world.getGameRules().getInt(FabridashResurrectedMod.DASH_MULTIPLIER), stack.getNbt().getInt("direction"));
-                } catch (Exception ignored) {}
+                    switch ((stack.getNbt().getInt("direction"))) {
+                        case 0 -> {
+                            stack.getNbt().putInt("direction", 1);
+                            stack.getNbt().putInt("CustomModelData", 1);
+                        }
+                        case 1 -> {
+                            stack.getNbt().putInt("direction", 2);
+                            stack.getNbt().putInt("CustomModelData", 2);
+                        }
+                        case 2 -> {
+                            stack.getNbt().putInt("direction", 3);
+                            stack.getNbt().putInt("CustomModelData", 3);
+                        }
+                        case 3 -> {
+                            stack.getNbt().putInt("direction", 0);
+                            stack.getNbt().putInt("CustomModelData", 0);
+                        }
+                    }
+                } catch (Exception ignored) {
+                }
+
+            } else {
+                fallDamageImmune = FABRIDASH_RESURRECTED_CONFIG.dash_cancel_fall_damage();
+
+                user.getItemCooldownManager().set(this, 80);
+                if (!world.isClient) {
+                    try {
+                            FabridashResurrected.dash(user, 5 * world.getGameRules().getInt(FabridashResurrectedMod.DASH_MULTIPLIER), stack.getNbt().getInt("direction"));
+                        } catch (Exception ignored) {
+                    }
+                }
             }
         }
+
         return TypedActionResult.pass(user.getStackInHand(hand));
     }
 }

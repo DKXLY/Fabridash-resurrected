@@ -4,6 +4,8 @@
   "package": "net.dkxly.fabridash_resurrected.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "PlayerEntityMixin",
+    "PlayerManagerMixin"
   ],
   "client": [
   ],

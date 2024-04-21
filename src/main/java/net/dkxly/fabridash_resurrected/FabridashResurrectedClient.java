@@ -19,7 +19,6 @@ public class FabridashResurrectedClient implements ClientModInitializer {
     }
 
     private void registerVelocityPacket(){
-        LOGGER.info("Registering windlight velocity packet receiver on client...");
         ClientPlayNetworking.registerGlobalReceiver(VelocityPacketS2C.ID, ((client, handler, buf, responseSender) -> {
             var results = VelocityPacketS2C.read(buf);
 

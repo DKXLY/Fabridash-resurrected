@@ -60,10 +60,10 @@ public class FabridashResurrected {
         l *= n / m;
         entity.addVelocity(h, k, l);
 
-        if(entity instanceof ServerPlayerEntity){
+        if (entity instanceof ServerPlayerEntity) {
             sendVelocityPacket((ServerPlayerEntity) entity, entity.getVelocity());
         }
-        for(int i = 0; i<50; i++){
+        for (int i = 0; i<50; i++) {
             entity.getWorld().addParticle(ParticleTypes.CLOUD, entity.getX()+random.nextFloat(), entity.getY()+random.nextFloat(), entity.getZ()+random.nextFloat(), 0, 0.1, 0);
         }
 
@@ -79,10 +79,9 @@ public class FabridashResurrected {
      * to use it.
      */
     public static void sendVelocityPacket(ServerPlayerEntity player, Vec3d vel){
-        LOGGER.info("Sending the packet, with this vel: "+ vel);
-        try{
+        try {
             ServerPlayNetworking.send(player, VelocityPacketS2C.ID, new VelocityPacketS2C(vel));
-        }catch(Exception e){
+        } catch(Exception e) {
             LOGGER.error("FAILED to send data packets to the client!");
             e.printStackTrace();
         }

@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "id": "fabridash_resurrected",
   "version": "${version}",
-
   "name": "Fabridash Resurrected",
   "description": "Continuation of the Fabridash mod (originally made by EmaFire003) for newer versions of Minecraft! This adds dashing in the form of various items or as an API for developers.",
   "authors": [
@@ -33,10 +32,12 @@
 
   "depends": {
     "fabricloader": ">=0.14.25",
+    "owo-lib": "0.11.2+1.20",
     "fabric-api": "*",
     "minecraft": "1.20.*",
     "java": ">=16"
   },
   "suggests": {
+    "mod-menu": ">=7.0.1"
   }
 }

@@ -15,6 +15,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
+import static net.dkxly.fabridash_resurrected.FabridashResurrectedMod.FABRIDASH_RESURRECTED_CONFIG;
+import static net.dkxly.fabridash_resurrected.FabridashResurrectedMod.fallDamageImmune;
+
 public class ObsidianDasher extends Item {
 
     public ObsidianDasher(Settings settings) {
@@ -23,18 +26,33 @@ public class ObsidianDasher extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.literal("Right-click to dash").formatted(Formatting.GOLD));
-        tooltip.add(Text.literal(""));
-        tooltip.add(Text.literal("TIP: Jump while dashing to go farther.").formatted(Formatting.GRAY));
+        if (FABRIDASH_RESURRECTED_CONFIG.item_functionality()) {
+            tooltip.add(Text.literal("Right-click to dash").formatted(Formatting.GOLD));
+            tooltip.add(Text.empty());
+            tooltip.add(Text.literal("TIP: Jump while dashing to go farther.").formatted(Formatting.GRAY));
+        } else {
+            tooltip.add(Text.empty());
+            tooltip.add(Text.literal("ITEM DISABLED").formatted(Formatting.DARK_RED, Formatting.BOLD));
+            tooltip.add(Text.literal("Change the configuration in").formatted(Formatting.GRAY));
+            tooltip.add(Text.literal("Mod menu or in the file to").formatted(Formatting.GRAY));
+            tooltip.add(Text.literal("enable item functionality.").formatted(Formatting.GRAY));
+        }
+
         super.appendTooltip(stack, world, tooltip, context);
     }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        user.getItemCooldownManager().set(this, 120);
-        if(!world.isClient){
-            FabridashResurrected.dash(user, 3*world.getGameRules().getInt(FabridashResurrectedMod.DASH_MULTIPLIER), 2);
+        if (FABRIDASH_RESURRECTED_CONFIG.item_functionality()) {
+            user.getItemCooldownManager().set(this, 120);
+            if (!world.isClient) {
+                FabridashResurrected.dash(user, 3 * world.getGameRules().getInt(FabridashResurrectedMod.DASH_MULTIPLIER), 2);
+            }
+
+            fallDamageImmune = FABRIDASH_RESURRECTED_CONFIG.dash_cancel_fall_damage();
         }
+
+
         return TypedActionResult.pass(user.getStackInHand(hand));
     }
 

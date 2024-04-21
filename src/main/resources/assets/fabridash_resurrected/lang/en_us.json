@@ -6,5 +6,13 @@
   "item.fabridash_resurrected.dash_globe": "Dash Globe",
   "item.fabridash_resurrected.calibrated_obsidian_dasher": "Calibrated Obsidian Dasher",
   "item.fabridash_resurrected.calibrated_netherite_plated_obsidian_dasher": "Calibrated Netherite-plated Obsidian Dasher",
-  "fabridash_resurrected.dash": "Dash"
+  "fabridash_resurrected.dash": "Dash",
+  "text.config.fabridash_resurrected.title": "§lFabridash Resurrected configuration",
+  "text.config.fabridash_resurrected.option.warning": "§7Unless you're a modpack developer, you probably don't need to change these options.",
+  "text.config.fabridash_resurrected.option.item_functionality": "Item functionality",
+  "text.config.fabridash_resurrected.option.item_functionality.tooltip": "§7Enables / disables functionality of\nthe items included in the mod.\n\n§aDEFAULT: Enabled",
+  "text.config.fabridash_resurrected.option.dash_globe_generation": "Dash Globe generation",
+  "text.config.fabridash_resurrected.option.dash_globe_generation.tooltip": "§7Enables / disables generation\nof the Dash Globe.\n\n§7Any treasure / loot chests generated\nwith this option set to §cDisabled \n§7will not contain the Dash Globe.\n\n§aDEFAULT: Enabled",
+  "text.config.fabridash_resurrected.option.dash_cancel_fall_damage": "Cancel fall damage",
+  "text.config.fabridash_resurrected.option.dash_cancel_fall_damage.tooltip": "§7Enables / disables\nfall damage immunity\nafter dashing.\n\n§7If you dash into the air,\nand this option is set to §aEnabled,\n§7you will not receive any fall damage.\n\n§aDEFAULT: Enabled"
 }

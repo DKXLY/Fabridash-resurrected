@@ -10,7 +10,6 @@ import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
 
-//Will be able to find the globe in various loot chests, with a chance between 9%-30% in the end city
 public class LootTableModifier {
     private static final Identifier ANCIENT_CITY
             = new Identifier("minecraft", "chests/ancient_city");
@@ -39,7 +38,6 @@ public class LootTableModifier {
 
 
     public static void modifyLootTables() {
-        FabridashResurrectedMod.LOGGER.info("Modifying loot tables to generate the dash globe...");
         float chance = 0.38f;
         LootTableEvents.MODIFY.register(((resourceManager, manager, id, supplier, setter) -> {
             if (IGLOO_STRUCTURE_CHEST_ID.equals(id)) {
@@ -47,8 +45,8 @@ public class LootTableModifier {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(chance))
                         .with(ItemEntry.builder(FabridashResurrectedItems.DASH_GLOBE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.pool(poolBuilder1.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)));
+                supplier.pool(poolBuilder1);
 
             }
         }));
@@ -60,8 +58,8 @@ public class LootTableModifier {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(chance-0.06f))
                         .with(ItemEntry.builder(FabridashResurrectedItems.DASH_GLOBE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
-                supplier.pool(poolBuilder1.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)));
+                supplier.pool(poolBuilder1);
             }
         }));
 
@@ -72,8 +70,8 @@ public class LootTableModifier {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(chance+0.1f))
                         .with(ItemEntry.builder(FabridashResurrectedItems.DASH_GLOBE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.pool(poolBuilder1.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)));
+                supplier.pool(poolBuilder1);
             }
         }));
 
@@ -84,8 +82,8 @@ public class LootTableModifier {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(chance))
                         .with(ItemEntry.builder(FabridashResurrectedItems.DASH_GLOBE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.pool(poolBuilder1.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)));
+                supplier.pool(poolBuilder1);
             }
         }));
 
@@ -96,8 +94,8 @@ public class LootTableModifier {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(chance+0.03f))
                         .with(ItemEntry.builder(FabridashResurrectedItems.DASH_GLOBE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.pool(poolBuilder1.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)));
+                supplier.pool(poolBuilder1);
 
             }
         }));
@@ -109,8 +107,8 @@ public class LootTableModifier {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(chance))
                         .with(ItemEntry.builder(FabridashResurrectedItems.DASH_GLOBE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.pool(poolBuilder1.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)));
+                supplier.pool(poolBuilder1);
 
             }
         }));
@@ -122,20 +120,20 @@ public class LootTableModifier {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(chance+0.1f))
                         .with(ItemEntry.builder(FabridashResurrectedItems.DASH_GLOBE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.pool(poolBuilder1.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)));
+                supplier.pool(poolBuilder1);
             }
         }));
 
         LootTableEvents.MODIFY.register(((resourceManager, manager, id, supplier, setter) -> {
             if (ANCIENT_CITY.equals(id)) {
-
                 LootPool.Builder poolBuilder1 = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(chance+0.06f))
+                        .conditionally(RandomChanceLootCondition.builder(chance + 0.06f))
                         .with(ItemEntry.builder(FabridashResurrectedItems.DASH_GLOBE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.pool(poolBuilder1.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)));
+                supplier.pool(poolBuilder1);
+
             }
         }));
     }

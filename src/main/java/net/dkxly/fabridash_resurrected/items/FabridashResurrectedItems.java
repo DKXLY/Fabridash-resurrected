@@ -48,6 +48,5 @@ public class FabridashResurrectedItems {
     }
 
     public static void registerItems(){
-        FabridashResurrectedMod.LOGGER.info("Registering items...");
     }
 }
