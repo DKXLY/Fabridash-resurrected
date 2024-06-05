@@ -16,7 +16,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class PlayerManagerMixin {
     @Inject(method = "onPlayerConnect", at = @At("HEAD"))
     public void injected(ClientConnection connection, ServerPlayerEntity player, CallbackInfo ci) {
-        LOGGER.info("nigger");
         playerJoinedSingleplayerWorld = player.server.isSingleplayer();
     }
 }
