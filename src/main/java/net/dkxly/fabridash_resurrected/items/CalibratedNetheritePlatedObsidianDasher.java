@@ -1,5 +1,6 @@
 package net.dkxly.fabridash_resurrected.items;
 
+import io.wispforest.owo.Owo;
 import net.dkxly.fabridash_resurrected.FabridashResurrectedMod;
 import net.dkxly.fabridash_resurrected.api.FabridashResurrected;
 import net.minecraft.client.item.TooltipContext;
@@ -100,9 +101,7 @@ public class CalibratedNetheritePlatedObsidianDasher extends Item {
                             stack.getNbt().putInt("CustomModelData", 0);
                         }
                     }
-                } catch (Exception ignored) {
-                }
-
+                } catch (Exception ignored) {}
             } else {
                 fallDamageImmune = FABRIDASH_RESURRECTED_CONFIG.dash_cancel_fall_damage();
 
