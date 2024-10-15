@@ -3,8 +3,11 @@ plugins {
 	id 'maven-publish'
 }
 
-sourceCompatibility = JavaVersion.VERSION_16
-targetCompatibility = JavaVersion.VERSION_16
+sourceCompatibility = JavaVersion.VERSION_21
+targetCompatibility = JavaVersion.VERSION_21
+
+compileJava.options.fork = true
+compileJava.options.forkOptions.executable = 'C:/Program Files/Eclipse Adoptium/jdk-21.0.3.9-hotspot/bin/javac.exe'
 
 archivesBaseName = project.archives_base_name
 version = project.mod_version
@@ -36,11 +39,6 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
-
-	modImplementation annotationProcessor ("io.wispforest:owo-lib:${project.owo_version}")
-
-
 	// Uncomment the following line to enable the deprecated Fabric API modules. 
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
 
@@ -57,7 +55,7 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
 	// Minecraft 1.18 (1.18-pre2) upwards uses Java 17.
-	it.options.release = 16
+	it.options.release = 21
 }
 
 java {

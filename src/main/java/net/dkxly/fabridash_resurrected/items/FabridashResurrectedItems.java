@@ -12,7 +12,7 @@ import static net.dkxly.fabridash_resurrected.FabridashResurrectedMod.itemList;
 public class FabridashResurrectedItems {
     public static final Item FABRIDASH_RESURRECTED_LOGO = Registry.register(
             Registries.ITEM,
-            new Identifier(FabridashResurrectedMod.MOD_ID, "fabridash_resurrected_logo"),
+            Identifier.of(FabridashResurrectedMod.MOD_ID, "fabridash_resurrected_logo"),
             new Item(new Item.Settings())
     );
 
@@ -41,7 +41,7 @@ public class FabridashResurrectedItems {
             new DashGlobe(new Item.Settings().rarity(Rarity.UNCOMMON).maxCount(16)));
 
     private static Item registerItem(String name, Item item){
-        Item registryEntry = Registry.register(Registries.ITEM, new Identifier(FabridashResurrectedMod.MOD_ID, name), item);
+        Item registryEntry = Registry.register(Registries.ITEM, Identifier.of(FabridashResurrectedMod.MOD_ID, name), item);
         itemList.add(registryEntry);
         return registryEntry;
     }

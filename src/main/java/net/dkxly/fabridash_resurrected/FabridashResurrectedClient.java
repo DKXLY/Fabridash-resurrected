@@ -1,6 +1,6 @@
 package net.dkxly.fabridash_resurrected;
 
-import net.dkxly.fabridash_resurrected.api.VelocityPacketS2C;
+import net.dkxly.fabridash_resurrected.api.VelocityPayload;
 import net.dkxly.fabridash_resurrected.sounds.FabridashResurrectedSounds;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
@@ -19,22 +19,16 @@ public class FabridashResurrectedClient implements ClientModInitializer {
     }
 
     private void registerVelocityPacket(){
-        ClientPlayNetworking.registerGlobalReceiver(VelocityPacketS2C.ID, ((client, handler, buf, responseSender) -> {
-            var results = VelocityPacketS2C.read(buf);
-
-            client.execute(() -> {
-                try {
-                    client.player.setVelocity(results);
-                    client.player.playSound(FabridashResurrectedSounds.DASH, 1, 1);
-                } catch (NoSuchElementException e){
-                    LOGGER.warn("No value in the packet, probably not a big problem");
-                } catch (Exception e){
-                    LOGGER.error("There was an error while getting the packet!");
-                    e.printStackTrace();
-                }
-            });
+        ClientPlayNetworking.registerGlobalReceiver(VelocityPayload.ID, (payload, context) -> context.client().execute(() -> {
+            try {
+                context.player().setVelocity(payload.vec3d());
+                context.player().playSound(FabridashResurrectedSounds.DASH, 1, 1);
+            } catch (NoSuchElementException noSuchElementException){
+                LOGGER.warn("No value in the payload, probably not a big problem");
+            } catch (Exception exception){
+                LOGGER.error("There was an error while getting the velocity payload!");
+                exception.printStackTrace();
+            }
         }));
     }
-
-
 }

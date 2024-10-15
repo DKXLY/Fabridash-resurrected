@@ -14,6 +14,7 @@ import static net.dkxly.fabridash_resurrected.FabridashResurrectedMod.*;
 public abstract class PlayerEntityMixin {
     @Unique
     private static boolean startSecondHandling;
+
     @Inject(method = "handleFallDamage", at = @At("HEAD"), cancellable = true)
     public void injected(float fallDistance, float damageMultiplier, DamageSource damageSource, CallbackInfoReturnable<Boolean> cir) {
         if (fallDamageImmune) {
