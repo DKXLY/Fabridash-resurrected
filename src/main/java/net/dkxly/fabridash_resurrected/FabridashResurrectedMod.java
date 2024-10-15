@@ -1,6 +1,5 @@
 package net.dkxly.fabridash_resurrected;
 
-import net.dkxly.fabridash_resurrected.config.FabridashResurrectedConfig;
 import net.dkxly.fabridash_resurrected.items.FabridashResurrectedItemGroups;
 import net.dkxly.fabridash_resurrected.items.FabridashResurrectedItems;
 import net.dkxly.fabridash_resurrected.sounds.FabridashResurrectedSounds;
@@ -30,8 +29,6 @@ public class FabridashResurrectedMod implements ModInitializer {
     public static final GameRules.Key<GameRules.IntRule> DASH_MULTIPLIER =
             GameRuleRegistry.register("dashMultiplier", GameRules.Category.MISC, GameRuleFactory.createIntRule(1));
 
-    public static final FabridashResurrectedConfig FABRIDASH_RESURRECTED_CONFIG = FabridashResurrectedConfig.createAndLoad();
-
     @Override
     public void onInitialize() {
         LOGGER.info("Loading Fabridash Resurrected!");
@@ -39,9 +36,7 @@ public class FabridashResurrectedMod implements ModInitializer {
         FabridashResurrectedItems.registerItems();
         FabridashResurrectedSounds.registerSounds();
 
-        if (FABRIDASH_RESURRECTED_CONFIG.dash_globe_generation()){
-            LootTableModifier.modifyLootTables();
-        }
+        LootTableModifier.modifyLootTables();
 
         Registry.register(
                 Registries.ITEM_GROUP,
