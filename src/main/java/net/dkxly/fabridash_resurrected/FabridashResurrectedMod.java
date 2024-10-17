@@ -1,6 +1,5 @@
 package net.dkxly.fabridash_resurrected;
 
-import net.dkxly.fabridash_resurrected.config.Config;
 import net.dkxly.fabridash_resurrected.items.FabridashResurrectedItems;
 import net.dkxly.fabridash_resurrected.sounds.FabridashResurrectedSounds;
 import net.fabricmc.api.ModInitializer;
@@ -21,23 +20,9 @@ public class FabridashResurrectedMod implements ModInitializer {
     public void onInitialize() {
         LOGGER.info("Loading Fabridash Resurrected!");
 
-        Config.registerConfigs();
         FabridashResurrectedSounds.registerSounds();
-        if(Config.ITEMS_ENABLED){
-            FabridashResurrectedItems.registerItems();
-            LootTableModifier.modifyLootTables();
-        }
-    }
+        FabridashResurrectedItems.registerItems();
+        LootTableModifier.modifyLootTables();
 
-    /**
-     * Should items (iron dasher, diamond dasher, etc.)
-     * be added by this mod instance?
-     *
-     * @param b Set this to false to disable items, true (default) to enable them
-     *          CURRENTLY DOESN'T WORK!!!
-     * */
-    public static void toggleItems(boolean b){
-        Config.ITEMS_ENABLED = b;
-        Config.reloadConfig();
     }
 }
